@@ -3,18 +3,7 @@ import ReactDOM from 'react-dom/client';
 
 
 function SelfDiagnosis () {
-  return (
-    <div>
-      <select name = "cars" id = "cars" default = "Select an emotion">
-        <option value = "nada" selected disabled hidden>Select an Emotion</option>
-        <option value = "happy">Happy</option>
-        <option value = "sad">Sad</option>
-        <option value = "angry">Angry</option>
-        <option value = "surprised">Surprised</option>
-      </select>
-      <button></button>
-    </div>
-  );
+  
 }
 
 
@@ -60,12 +49,44 @@ function InputBox () {
 }
 
 function App() {
-  return <div>
-    <h1>Hello world!</h1>
-    <NameTag name = "Bob Ross"/>
-    <MyCounter />
-    <InputBox />
-    <SelfDiagnosis />
-  </div>
+  const [isVisible, setIsVisible] = useState(true);
+
+  const toggleVisibility = () => {
+    setIsVisible(!isVisible);
+  };
+  function getDiagnosis () {
+    var selfD = document.getElementById("selfForm");
+    toggleVisibility();
+    alert(selfD.value);
+  }
+  return (
+    <div>
+        <div style={{ display: isVisible ? 'block' : 'none' }}>
+        {/* Your content here */}
+        
+        
+        <NameTag name = "Bob Ross"/>
+        <MyCounter />
+        <InputBox />
+        {/*Input stuff here lol. This is gonna be the section for self diagnoses*/}
+        <div>
+          <select name = "dropdown" id = "selfForm" default = "Select an emotion">
+            <option value = "nada" selected disabled hidden>Select an Emotion</option>
+            <option value = "happy">Happy</option>
+            <option value = "sad">Sad</option>
+            <option value = "angry">Angry</option>
+            <option value = "surprised">Surprised</option>
+          </select>
+          <button onClick={getDiagnosis}>Clickity clackity you're about to get attackity</button>
+        </div>
+        
+        <SelfDiagnosis />
+      </div>
+      <button onClick={toggleVisibility}>
+          {isVisible ? 'Hide' : 'Show'}
+      </button>
+    </div>
+  );
+
 }
 export default App;
