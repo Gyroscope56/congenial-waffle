@@ -3,7 +3,6 @@ from werkzeug.utils import secure_filename
 import os
 from main import predict
 from main2 import predict2
-# RIP OPENAI API KEY
  
 '''
 
