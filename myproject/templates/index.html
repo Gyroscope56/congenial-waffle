@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rendering Dynamic Images Using Flask</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css' )}}"
+    />
+</head>
+<body>
+<form action="{{ url_for('upload_file') }}" enctype="multipart/form-data" method="POST">
+    <input name="img" class="file-selector" type="file"/>
+    <input type="submit" class="submit-button"/>
+</form>
+ 
+{% if img %}
+<h1>Your Image</h1>
+<img src="{{img}}">
+<h2>
+  You are {{emotion[0]}}
+</h2>
+<p>
+  {{ emotion[1] }}
+</p>
+{% else %}
+<h1>Image will render here...</h1>
+{% endif %}
+</body>
+</html>

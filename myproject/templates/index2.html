@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>My First Flask Project</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="description" content="This is my very first Flask Project!" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='style.css' )}}"
+    />
+    <link rel="icon" href="favicon.png" />
+  </head>
+
+  <body>
+    
+    <form action="{{ url_for('help')}}" method="post">
+        <!--<input type="text" id="firstname" name="fname" placeholder="firstname">-->
+        <textarea rows="5" cols="33" id="firstname" name="fname">Begin writing here...</textarea>
+        <br></br>
+        <button type="submit" class="submit-button">Submit</button>
+    {% if emotion %}
+    <br></br>
+        <h2>Your text seems {{ emotion[0] }}</h2>
+        <br></br>
+        <p> {{ emotion[1] }} </p>
+    {% else %}  
+    <h1>Write how you are feeling today</h1>
+    {% endif %}
+  </body>
+</html>
