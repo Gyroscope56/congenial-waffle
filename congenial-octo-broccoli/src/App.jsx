@@ -24,9 +24,9 @@ function SelfDiagnosis (props) {
         <DefaultMessage m = {props.emotion}/>
         <ol>
           <li>Picnic in the Park: Gather some friends or family, pack some delicious food and drinks, and spend a sunny day lounging in a beautiful park. Play some outdoor games like Frisbee or soccer to add to the fun.</li>
-          <li><br></br>Movie Marathon: Invite friends over for a movie marathon featuring your favorite feel-good films. Stock up on popcorn, snacks, and comfy blankets for a cozy and entertaining evening.</li>
-          <li><br></br>Creative Arts and Crafts: Spend the day getting creative with arts and crafts. Whether it's painting, pottery, or DIY projects, tapping into your artistic side can be incredibly uplifting.</li>
-          <li><br></br>Recreation: Indulge in activities that bring you joy and relaxation. Whether it's pursuing your favorite hobbies like gardening, cooking, or painting, or engaging in recreational sports such as swimming, tennis, or golf, take some time to do what makes you happy. Recreation allows you to unwind, recharge, and enhance your mental and physical well-being. So, go ahead, embrace your interests, and make time for leisurely pursuits—it's a rewarding way to improve your overall quality of life.</li>
+          <li>Movie Marathon: Invite friends over for a movie marathon featuring your favorite feel-good films. Stock up on popcorn, snacks, and comfy blankets for a cozy and entertaining evening.</li>
+          <li>Creative Arts and Crafts: Spend the day getting creative with arts and crafts. Whether it's painting, pottery, or DIY projects, tapping into your artistic side can be incredibly uplifting.</li>
+          <li>Recreation: Indulge in activities that bring you joy and relaxation. Whether it's pursuing your favorite hobbies like gardening, cooking, or painting, or engaging in recreational sports such as swimming, tennis, or golf, take some time to do what makes you happy. Recreation allows you to unwind, recharge, and enhance your mental and physical well-being. So, go ahead, embrace your interests, and make time for leisurely pursuits—it's a rewarding way to improve your overall quality of life.</li>
         </ol>
       </div>
     )
@@ -37,10 +37,10 @@ function SelfDiagnosis (props) {
         <DefaultMessage m = {props.emotion}/>
         <ol>
           <li>Journaling: Take some time to reflect on your feelings by journaling. Write down your thoughts, emotions, and hopes for the future. Expressing yourself on paper can be cathartic and help you process your sadness.</li>
-          <li><br></br>Nature Walk: Take a solitary walk in nature, whether it's through a nearby park, forest, or along a beach. Immersing yourself in the beauty of the outdoors can provide solace and peace of mind.</li>
-          <li><br></br>Comfort Food Cooking: Spend some time in the kitchen cooking up your favorite comfort foods. The process of cooking can be therapeutic, and indulging in delicious meals can provide temporary relief from sadness.</li>
-          <li><br></br>Cuddle with Pets: Spend quality time with your pets if you have any. Their unconditional love and companionship can be incredibly comforting during difficult times.</li>
-          <li><br></br>Reach Out to Loved Ones: Connect with friends or family members who are understanding and supportive. Whether it's through a heartfelt conversation or simply spending time together, being around loved ones can provide comfort and emotional support.</li>
+          <li>Nature Walk: Take a solitary walk in nature, whether it's through a nearby park, forest, or along a beach. Immersing yourself in the beauty of the outdoors can provide solace and peace of mind.</li>
+          <li>Comfort Food Cooking: Spend some time in the kitchen cooking up your favorite comfort foods. The process of cooking can be therapeutic, and indulging in delicious meals can provide temporary relief from sadness.</li>
+          <li>Cuddle with Pets: Spend quality time with your pets if you have any. Their unconditional love and companionship can be incredibly comforting during difficult times.</li>
+          <li>Reach Out to Loved Ones: Connect with friends or family members who are understanding and supportive. Whether it's through a heartfelt conversation or simply spending time together, being around loved ones can provide comfort and emotional support.</li>
         </ol>
       </div>
     )
@@ -51,9 +51,9 @@ function SelfDiagnosis (props) {
         <DefaultMessage m = {props.emotion}/>
         <ol>
           <li>Exercise: Channel your anger into a workout session. Whether it's hitting the gym, going for a run, or practicing yoga, physical activity can help release pent-up tension and frustration.</li>
-          <li><br></br>Punching Bag Session: Release your anger by hitting a punching bag or pillow. Letting out physical energy in a controlled environment can help dissipate feelings of anger and aggression.</li>
-          <li><br></br>Listen to Music: Put on some music that matches your mood and allow yourself to fully experience and express your emotions through song lyrics and melodies.</li>
-          <li><br></br>Write a Letter (But Don't Send It): Write a letter expressing your anger, frustration, and grievances. Pour out your feelings onto paper, but refrain from sending it. This exercise can help you release built-up emotions and gain clarity on the situation without causing harm to others.</li>
+          <li>Punching Bag Session: Release your anger by hitting a punching bag or pillow. Letting out physical energy in a controlled environment can help dissipate feelings of anger and aggression.</li>
+          <li>Listen to Music: Put on some music that matches your mood and allow yourself to fully experience and express your emotions through song lyrics and melodies.</li>
+          <li>Write a Letter (But Don't Send It): Write a letter expressing your anger, frustration, and grievances. Pour out your feelings onto paper, but refrain from sending it. This exercise can help you release built-up emotions and gain clarity on the situation without causing harm to others.</li>
         </ol>
       </div>
     )
@@ -150,7 +150,8 @@ function App() {
           </select>
           <br></br>
         </div>
-        <button onClick={getDiagnosis}>Clickity clackity you're about to get attackity</button>
+        <br></br>
+        <button onClick={getDiagnosis}>Submit Emotion</button>
       </div>
       <div style={{ display: !isVisible ? 'block' : 'none' }}>
         {/* Your content here */}
